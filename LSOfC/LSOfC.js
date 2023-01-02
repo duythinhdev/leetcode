@@ -1,4 +1,4 @@
-function largestSubsetOfCards(k) { 
+function lSOfc(k) { 
     const map = new Map();
     let max = 1; 
     const newArray = [];
@@ -26,5 +26,5 @@ function largestSubsetOfCards(k) {
     }
     return newArray;
 }
-const ls = largestSubsetOfCards([[3,4,7,9],[2,3,4,6,7,8,11],[3,4,5,7,10]]);
+const ls = lSOfc([[3,4,7,9],[2,3,4,6,7,8,11],[3,4,5,7,10]]);
 console.log(ls);
