@@ -15,7 +15,6 @@ function lSOfc(k) {
             }
         }
     }
-
     for(let i = 0; i < k.length;i ++) {
         for(let j = 0 ; j < k[i].length ;j ++) {
             if(map.get(k[i][j]) === max){

@@ -38,6 +38,5 @@ var merge = function(nums1, m, nums2, n) {
             count++;
         }
     }
-    console.log("nums1",nums1);
     return nums1.sort((a,b)=>a-b);
 };
