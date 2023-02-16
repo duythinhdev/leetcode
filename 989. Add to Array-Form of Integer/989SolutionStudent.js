@@ -5,7 +5,7 @@
  */
 var addToArrayForm = function(num, k) {
     let stringNew = '';
-    let sum = '';
+    let sum = 0;
     for(let i = 0; i < num.length; i ++){
         stringNew += num[i];
     }
