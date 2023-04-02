@@ -17,8 +17,10 @@ var lemonadeChange = function(bills) {
             if (numberOf10.length && numberOf5.length) {
                 numberOf10.pop();
                 numberOf5.pop();
+                console.log("numberOf5",numberOf5);
             } else if (!numberOf10.length && numberOf5.length >= 3) {
                 numberOf5.splice(numberOf5.length - 3, 3);
+                console.log("numberOf5.length - 3",numberOf5.length - 3);
             } else {
                 return false;
             }
@@ -27,29 +29,3 @@ var lemonadeChange = function(bills) {
 
     return true;
 };
-var lemonadeChangeSolutionTwo = function(bills) {
-    let five = 0;
-    let ten = 0;
-    let twenty = 0;
-
-    for(let bill of bills) {
-        if(bill === 5) {
-            five++
-        } else if(bill === 10) {
-            five--
-            ten++
-        } else if(bill === 20) {
-            if(ten>0) {
-                ten--
-                five--
-            } else {
-                five = five - 3
-            }
-        }
-        if(five < 0 || ten < 0)
-            return false
-    }
-
-    return true;
-};
-console.log(lemonadeChange([5,5,5,10,20]));
