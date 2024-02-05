@@ -1,8 +1,10 @@
 function countOccurrences(arr) {
   const countMap = {};
+
   arr.forEach(num => {
     countMap[num] = (countMap[num] || 0) + 1;
   });
+
   return countMap;
 }
 
