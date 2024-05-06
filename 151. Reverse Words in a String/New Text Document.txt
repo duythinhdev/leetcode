@@ -1,0 +1,48 @@
+var reverseWords = function(s) {
+    // return s.split(" ").reverse().filter(w => w !== "").join(" ");
+    // let wordsInS = [];
+    // let word = "";
+    // for(let idx = 0; idx < s.length; ++idx) {
+    //     if(idx > 0 && s[idx] === " " && s[idx - 1] !== " ") {
+    //         wordsInS.push(word);
+    //         word = "";
+    //     } else if(s[idx] !== " ") {
+    //         word += s[idx];
+    //     }
+    // }
+    // if(word !== "") {
+    //     wordsInS.push(word);
+    // }
+    // console.log('wordsInS',wordsInS);
+    // let result = "";
+    // for(let i = wordsInS.length - 1; i >= 0; --i) {
+    //     console.log('wordsInS[i]',wordsInS[i]);
+    //     result += wordsInS[i];
+    //     if(i > 0) {
+    //         result += " ";
+    //     }
+    // }
+    // return result;
+
+    let wordsInS = [];
+    let word  = "";
+    for(let i = 0; i < s.length; ++i){
+        if(i > 0 && s[i] === " " && s[i - 1] !== " "){
+            wordsInS.push(word);
+            word = ""
+        }else if(s[i] !== " "){
+            word += s[i];
+        }
+    }
+    if(word !== ""){
+        wordsInS.push(word);
+    }
+    let result = "";
+    for(let i = wordsInS.length - 1; i >= 0; --i){
+        result += wordsInS[i];
+        if(i > 0){
+            result += ' ';
+        }
+    }
+    return result;
+}
