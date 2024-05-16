@@ -8,8 +8,15 @@ const originalArray = [1, 2, 3, 4, 5];
 // const newArray = [...originalArray].reverse(); //Spread operator gives a new copy
 
 
-const newArray = originalArray.reduce((accumulator, value) => {
-    return [value, ...accumulator];
+// const newArray = originalArray.reduce((accumulator, value) => {
+//     console.log('accumulator', accumulator);
+//     console.log('value', value);
+//     return [value, ...accumulator];
+// }, []);
+
+const newArray = originalArray.reduceRight((accumulator, value) => {
+    accumulator.push(value);
+    return accumulator;
 }, []);
 
 console.log(originalArray);
