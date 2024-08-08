@@ -1,19 +1,3 @@
-function mergeSort(arr) {
-    if (arr.length <= 1) {
-        return arr;
-    }
-
-    // Chia mảng thành hai phần
-    const middle = Math.floor(arr.length / 2);
-    const leftHalf = arr.slice(0, middle);
-    const rightHalf = arr.slice(middle);
-    // Đệ quy để sắp xếp từng phần
-    const sortedLeft = mergeSort(leftHalf);
-    const sortedRight = mergeSort(rightHalf);
-
-    return merge(sortedLeft, sortedRight);
-}
-
 function merge(left, right) {
     let result = [];
     let leftIndex = 0;
@@ -41,6 +25,16 @@ function merge(left, right) {
     }
     return result;
 }
+
+function mergeSort(arr) {
+    if (arr.length <= 1) {
+        return arr;
+    }
+    const middle = Math.floor(arr.length / 2);
+    const left = arr.slice(0, middle);
+    const right = arr.slice(middle);
+    return merge(mergeSort(left), mergeSort(right));
+};
 
 const unsortedArray = [5, 2, 9, 1, 5, 6];
 const sortedArray = mergeSort(unsortedArray);
