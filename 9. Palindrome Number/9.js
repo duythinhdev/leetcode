@@ -3,10 +3,12 @@
  * @return {boolean}
  */
 var isPalindrome = function(x) {
+
     // solution 1
     // let revered = x.toString().split('').reverse().join('');
     // console.log("revered",revered);
     // return (x.toString() === revered);
+
     // solution 2
     // let strString = x.toString();
     // let sumString = ''
