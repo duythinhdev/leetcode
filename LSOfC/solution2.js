@@ -1,18 +1,3 @@
-// function largestSubset(cards){
-//     const countMap = new Map();
-//     const numArrays = cards.length;
-//     for(let arr of cards){
-//         const uniqueSet = new Set(arr);
-//         console.log('uniqueSet',uniqueSet);
-//         for(let num of uniqueSet){
-//             countMap.set(num, (countMap.get(num) || 0) + 1);
-//         }
-//     }
-//     const commonElements = [...countMap.keys()].filter(num => countMap.get(num) === numArrays);
-//     console.log('commonElements');
-//     return cards[0]?.filter(num => commonElements.includes(num));
-// }
-
 function largestSubset(cards) {
     const countMap = new Map();
     const numArrays = cards.length;
@@ -24,9 +9,8 @@ function largestSubset(cards) {
     }
     const commonElements =  [...countMap.keys()].filter(num => countMap.get(num) === numArrays);
     console.log('commonElements',commonElements);
-    console.log('countMap',countMap);
     const largest = cards[0]?.filter(num => commonElements.includes(num));
-    console.log('largest',largest);
+    return largest;
 }
 const arrays = [
     [1, 3, 4, 6, 7, 9],
