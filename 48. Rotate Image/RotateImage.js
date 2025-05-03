@@ -1,7 +1,6 @@
 var rotate = function(matrix) {
   var n = matrix.length;
   var n2 = Math.floor(n / 2);
-  console.log("n",n);
   // 1 2 3     7 8 9
   // 4 5 6  => 4 5 6
   // 7 8 9     1 2 3

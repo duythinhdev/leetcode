@@ -32,4 +32,4 @@ var isPalindrome = function(x) {
 
 const log = isPalindrome(121);
 
-console.log('isPalindrome', log);
+console.log('log', log);

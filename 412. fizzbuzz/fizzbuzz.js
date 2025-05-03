@@ -10,5 +10,6 @@ var fizzBuzz = function(n) {
          }
          output.push(newString.length ? newString  : i.toString());
      }
+     console.log('output',output);
      return output;
 };
