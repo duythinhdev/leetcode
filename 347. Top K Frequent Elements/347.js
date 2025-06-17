@@ -8,7 +8,6 @@ var topKFrequent = function(nums, k) {
     const newAray = []
 
     nums.forEach(item => map.set(item, (map.get(item) || 0) + 1));
-    console.log('nums',nums);
 
     const sortArray = [...map.entries()].sort((a,b) => b[1] - a[1]);
 
@@ -17,3 +16,7 @@ var topKFrequent = function(nums, k) {
     }
     return newAray;
 };
+
+const logList = topKFrequent([1,1,1,2,2,3], 2);
+
+console.log('logList',logList);
