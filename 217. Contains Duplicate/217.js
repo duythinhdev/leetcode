@@ -2,7 +2,7 @@
  * @param {number[]} nums
  * @return {boolean}
  */
-var containsDuplicate = function(nums) {
+var containDuplicate = function(nums) {
     const map  = new Map();
     for(let i = 0; i < nums.length;i ++){
         if(map.has(nums[i])){
@@ -20,3 +20,5 @@ var containsDuplicate = function(nums) {
 var containsDuplicate = function(nums) {
     return new Set(nums).size !== nums.length;
 };
+
+console.log('containsDuplicate', containDuplicate([1,2,3,1]));
