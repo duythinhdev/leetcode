@@ -21,4 +21,17 @@ var containsDuplicate = function(nums) {
     return new Set(nums).size !== nums.length;
 };
 
-console.log('containsDuplicate', containDuplicate([1,2,3,1]));
+function objectSolution(nums) {
+    let testObj = {};
+    for (var i = 0; i < nums.length; i++) {
+        let aNum = nums[i];
+        if (testObj[aNum]) {
+            return true;
+        } else {
+            testObj[aNum] = true;
+        }
+    }
+
+    return false;
+}
+console.log('containsDuplicate', objectSolution([1,2,3,1]));
