@@ -27,7 +27,6 @@ function largestSubset(cards){
         }
     }
     console.log('numArrays',numArrays);
-    console.log('countMap',countMap);
     console.log('[...countMap.keys()]',[...countMap.keys()]);
     const commonElements = [...countMap.keys()].filter(num => countMap.get(num) === numArrays);
     const largest = cards[0]?.filter(num => commonElements.includes(num));
