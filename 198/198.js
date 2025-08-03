@@ -10,7 +10,6 @@ var rob = function(nums) {
     // dp[0] = max amount if we only have the first house to rob
     // dp[1] = max amount if we only have the first 2 houses to rob
     let dp = [nums[0], Math.max(nums[0], nums[1])];
-    console.log("dp",dp)
 
     for (let i = 2; i < nums.length; i++) {
         // Compare current max with the previous max

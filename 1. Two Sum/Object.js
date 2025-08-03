@@ -9,6 +9,7 @@ var twoSum = function(nums, target) {
         const visitedNum = target - nums[i];
         console.log('visitedNum', visitedNum);
         const indexNum = visitedNums[visitedNum];
+        console.log('indexNum', indexNum);
         if (indexNum >= 0) {
             return [indexNum, i]
         }
