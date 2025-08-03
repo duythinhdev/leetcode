@@ -11,10 +11,10 @@ function countOccurrencesFor(arr) {
     for (const item of arr) {
         result[item] = (result[item] || 0) + 1;
     }
-
+    console.log('result',result);
     return result;
 }
 
 const input = [2, 2, 33, 44, 66, 44];
-const counts = countOccurrences(input);
+const counts = countOccurrencesFor(input);
 console.log('Counts:', counts);
