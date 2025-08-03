@@ -5,13 +5,22 @@ function countOccurrences(arr) {
     }, {});
 }
 
+// function countOccurrencesFor(arr) {
+//     const result = {};
+//
+//     for (const item of arr) {
+//         result[item] = (result[item] || 0) + 1;
+//     }
+//     console.log('result',result);
+//     return result;
+// }
+
 function countOccurrencesFor(arr) {
     const result = {};
 
-    for (const item of arr) {
+    for(const item of arr) {
         result[item] = (result[item] || 0) + 1;
     }
-    console.log('result',result);
     return result;
 }
 
