@@ -1,0 +1,29 @@
+### Singleton Pattern là gì?
+
+**Singleton Pattern** là một **Creational Design Pattern** đảm bảo rằng một lớp chỉ có duy nhất **một đối tượng** (instance) trong suốt vòng đời của ứng dụng, và cung cấp một điểm truy cập toàn cục đến đối tượng này.
+
+Singleton hữu ích khi bạn cần một đối tượng duy nhất kiểm soát các tài nguyên hoặc trạng thái dùng chung, chẳng hạn như **kết nối cơ sở dữ liệu** hoặc **trình quản lý cấu hình**. Pattern này đảm bảo rằng sẽ không bao giờ có hai đối tượng của cùng một lớp tồn tại trong ứng dụng.
+
+### 2. Cách triển khai Singleton Pattern
+
+Một cách phổ biến để triển khai Singleton trong JavaScript là dùng một biến để lưu trữ instance duy nhất và một hàm khởi tạo (constructor) kiểm tra biến đó trước khi tạo mới
+
+### 3. Lợi ích của Singleton Pattern
+
+- **Tiết kiệm tài nguyên**: Singleton Pattern đảm bảo chỉ có một đối tượng duy nhất, rất hữu ích cho các tài nguyên cần quản lý chung như kết nối cơ sở dữ liệu.
+- **Điểm truy cập toàn cục**: Singleton cung cấp một điểm truy cập nhất quán, giúp giảm sự phức tạp khi cần chia sẻ dữ liệu hoặc tài nguyên.
+- **Dễ dàng kiểm soát trạng thái dùng chung**: Đối tượng Singleton có thể chứa dữ liệu hoặc trạng thái dùng chung cho toàn bộ ứng dụng.
+
+### 4. Khi nào nên sử dụng Singleton Pattern?
+
+- Khi bạn cần một đối tượng duy nhất dùng chung cho toàn bộ ứng dụng, như **kết nối cơ sở dữ liệu**, **trình quản lý cấu hình**, hoặc **log system**.
+- Khi bạn cần kiểm soát chặt chẽ một tài nguyên hoặc trạng thái dùng chung, đảm bảo không có nhiều đối tượng cùng truy cập vào một tài nguyên gây xung đột.
+
+### 5. Lưu ý khi sử dụng Singleton Pattern
+
+Singleton Pattern rất hữu ích, nhưng cũng có thể gây ra một số vấn đề nếu lạm dụng:
+
+- **Khó kiểm thử**: Do Singleton có một điểm truy cập duy nhất và dữ liệu dùng chung, nó có thể gây khó khăn cho việc kiểm thử đơn vị nếu không được thiết kế cẩn thận.
+- **Khó mở rộng**: Nếu sau này bạn muốn thay đổi để có nhiều đối tượng, sẽ khó thực hiện nếu thiết kế ban đầu chỉ có một instance duy nhất.
+
+**Tóm lại**, Singleton Pattern là một công cụ mạnh mẽ để quản lý các tài nguyên dùng chung, giúp tiết kiệm tài nguyên và duy trì một đối tượng nhất quán trong suốt vòng đời ứng dụng.
