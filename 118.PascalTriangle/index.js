@@ -1,19 +1,14 @@
-function generatePascalTriangle(numRows) {
+function generatePascalTriangle(numRows){
     const triangle = [];
-
-    for (let i = 0; i < numRows; i++) {
-        const row = [1]; // phần tử đầu luôn là 1
-
-        for (let j = 1; j < i; j++) {
-            // phần tử giữa = tổng 2 phần tử trên nó
+    for(let i = 0; i  < numRows; i++){
+        const row = [1];
+        for(let j = 1; j < i; i++){
             row[j] = triangle[i - 1][j - 1] + triangle[i - 1][j];
+            console.log('row', row);
         }
-
-        if (i > 0) row.push(1); // phần tử cuối luôn là 1 (trừ dòng 0)
-        triangle.push(row);
+        if(i > 0) row.push(1);
+        triangle.push(1);
     }
-
     return triangle;
 }
-
-console.log(generatePascalTriangle(7));
+console.log(generatePascalTriangle(4));
