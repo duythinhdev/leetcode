@@ -1,6 +1,6 @@
 /**
  * @param {number[]} nums
- * @param {number} k
+ * @param {number} k n log n
  * @return {number[]}
  */
 var topKFrequent = function(nums, k) {
@@ -18,5 +18,6 @@ var topKFrequent = function(nums, k) {
 };
 
 const logList = topKFrequent([1,1,1,2,2,3], 2);
+
 
 console.log('logList',logList);
