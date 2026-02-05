@@ -14,17 +14,17 @@ function partition(array, low, high) {
     array[i + 1] = array[high];
     array[high] = temp;
     return i + 1;
-  }
-  
-  function quickSort(array, low, high) {
+}
+const quickSort = (array, low, high) => {
     if (low < high) {
-      var pi = partition(array, low, high);
-  
+      const pi = partition(array, low, high);
+      console.log('pi',pi)
+
       quickSort(array, low, pi - 1);
-  
+
       quickSort(array, pi + 1, high);
     }
-  }
+}
   
   let arr = [3, 5, -2, 14, -9, 30];
   quickSort(arr, 0, arr.length - 1);
