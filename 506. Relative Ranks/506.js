@@ -2,6 +2,7 @@
  * @param {number[]} score
  * @return {string[]}
  */
+
 // var findRelativeRanks = function(score) {
 //     let newScore = [...score].sort((a, b) => b - a)
 //     let mapRes = new Map()
@@ -19,22 +20,22 @@
 
 function findRelativeRanks(score){
     const sortedScores = [...score].sort((a, b) => b - a);
-    const map = new Map();
+    const rankMap = new Map();
     for(let i = 0; i < sortedScores.length; i++){
         if(i === 0){
-            map.set(sortedScores[i], 'Gold Medal');
+            rankMap.set(sortedScores[i], 'Gold Medal');
             continue;
         }
         if(i === 1){
-            map.set(sortedScores[i], 'Silver Medal');
+            rankMap.set(sortedScores[i], 'Silver Medal');
             continue;
         }
         if(i === 2){
-            map.set(sortedScores[i], 'Bronze Medal');
+            rankMap.set(sortedScores[i], 'Bronze Medal');
             continue;
         }
-        map.set(sortedScores[i], (i + 1).toString());
+        rankMap.set(sortedScores[i], (i + 1).toString());
     }
-    return sortedScores.map((item) => map.get(item));
+    return sortedScores.map(s => rankMap.get(s));
 }
-console.log('findRelativeRanks',findRelativeRanks([10,3,8,9,4]));
+console.log('findRelativeRanks', findRelativeRanks([10,3,8,9,4]));
