@@ -18,24 +18,44 @@
 //     return score;
 // };
 
-function findRelativeRanks(score){
-    const sortedScores = [...score].sort((a, b) => b - a);
+// function findRelativeRanks(score){
+//     const sortedScores = [...score].sort((a, b) => a - b);
+//     const rankMap = new Map();
+//     for(let i = 0 ; i < sortedScores.length; i++) {
+//         if(i === 0){
+//             rankMap.set(sortedScores[i], 'Gold Medal');
+//             continue;
+//         }
+//         if(i === 1){
+//             rankMap.set(sortedScores[i], 'Silver Medal');
+//             continue;
+//         }
+//         if(i === 2){
+//             rankMap.set(sortedScores[i], 'Bronze Medal');
+//             continue;
+//         }
+//         rankMap.set(sortedScores[i], (i + 1).toString());
+//     }
+//     return sortedScores.map(num => rankMap.get(num));
+// }
+
+var findRelativeRanks = function(score) {
     const rankMap = new Map();
-    for(let i = 0; i < sortedScores.length; i++){
-        if(i === 0){
+    const sortedScores = [...score].sort((a, b) => b - a);
+    for (let i = 0; i < sortedScores.length; i++) {
+        if (i === 0) {
             rankMap.set(sortedScores[i], 'Gold Medal');
-            continue;
-        }
-        if(i === 1){
+        } else if (i === 1) {
             rankMap.set(sortedScores[i], 'Silver Medal');
-            continue;
-        }
-        if(i === 2){
+        } else if (i === 2) {
             rankMap.set(sortedScores[i], 'Bronze Medal');
-            continue;
+        } else {
+            rankMap.set(sortedScores[i], String(i + 1));
         }
-        rankMap.set(sortedScores[i], (i + 1).toString());
     }
-    return sortedScores.map(s => rankMap.get(s));
-}
+
+    return score.map(item => rankMap.get(item));
+};
+
 console.log('findRelativeRanks', findRelativeRanks([10,3,8,9,4]));
+console.log('findRelativeRanks', findRelativeRanks([5,4,3,2,1]));
